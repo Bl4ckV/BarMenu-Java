@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="604.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.javaapi.PrimaryController">
+   <children>
+      <TableView fx:id="tabla" layoutX="5.0" layoutY="97.0" onMouseClicked="#showImage" prefHeight="191.0" prefWidth="337.0">
+        <columns>
+          <TableColumn fx:id="columna1" prefWidth="75.0" text="Nombre" />
+          <TableColumn fx:id="columna2" prefWidth="75.0" text="Alcohol" />
+            <TableColumn fx:id="columna3" prefWidth="185.0" text="Última Modificación" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imagen2" fitHeight="192.0" fitWidth="200.0" layoutX="374.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imagen1" fitHeight="91.0" fitWidth="600.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Img/bar.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="bDescargar" layoutX="437.0" layoutY="298.0" mnemonicParsing="false" onAction="#sendRequest" onMouseEntered="#onChange" onMouseExited="#onChange2" prefHeight="34.0" prefWidth="153.0" style="-fx-background-color: orange;" text="Descargar datos" />
+      <Label fx:id="lInfo" layoutX="5.0" layoutY="306.0" prefHeight="17.0" prefWidth="327.0" textFill="WHITE" />
+      <CheckBox fx:id="c1" layoutX="244.0" layoutY="306.0" mnemonicParsing="false" text="Alcohólicas" textFill="WHITE" />
+      <CheckBox fx:id="c2" layoutX="332.0" layoutY="306.0" mnemonicParsing="false" text="No alcohólicas" textFill="WHITE" />
+      <ImageView fitHeight="192.0" fitWidth="246.0" layoutX="353.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Img/marco.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
